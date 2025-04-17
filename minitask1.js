@@ -1,9 +1,9 @@
 function oddEven(angkaX){
   if(angkaX % 2 == 0){
     console.log(angkaX + " adalah angka genap");
-  } else{
+    return
+  } 
     console.log(angkaX + " adalah angka ganjil");
-  }
 }
 
 oddEven(7)
