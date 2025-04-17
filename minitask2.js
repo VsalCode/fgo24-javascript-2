@@ -1,4 +1,4 @@
-const minitask2 = (r) => {
+const countingCircles = (r) => {
 
   if (r % 7 == 0) {
     console.log("Luas: " + 22/7 * r * r );
@@ -9,4 +9,4 @@ const minitask2 = (r) => {
     console.log("Keliling: " + 2 * 3.14 * r );
 }
 
-minitask2(7)
+countingCircles(7)
