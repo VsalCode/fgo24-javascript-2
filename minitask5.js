@@ -21,11 +21,14 @@ console.log(suhu(5,"k", result));
 console.log(suhu(5,"r", result));
 
 console.log(suhu(5,"f", function(x, y){
-  return `Hasilnya: ${(9/5) * x}`
-}));
-console.log(suhu(5,"r", function(x, y){
-  return `Hasilnya: ${(4/5) * x}`
-}));
-console.log(suhu(5,"k", function(x, y){
-  return `Hasilnya: ${x + 273,15}`
+  switch (y) {
+    case "f":
+      return `Hasilnya: ${(9/5) * x}`
+      break;
+    case "r":
+      return `Hasilnya: ${(4/5) * x}`
+      break;
+    case "k":
+      return `Hasilnya: ${x + 273,15}`
+    }
 }));
