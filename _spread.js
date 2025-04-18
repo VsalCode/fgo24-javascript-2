@@ -1,9 +1,22 @@
 /*--------------------------------------------------------------------------------- 
 CASE 1 :
-Menambah array "string" dengan berisikan "key" object yang sama seperti index ke-1, hanya beda value
+- me reassign sebuah data berbentuk array dengan spread operator
+- Menambah array "string" dengan berisikan "key" object yang sama seperti index ke-1, hanya beda value
 ---------------------------------------------------------------------------------*/
 
-// cara destructuring dengan spread biasa : 
+// reassign dengan spread operator
+const data = [
+  ["i",["i","i","i",{ number: 123, string: ["i", { value: "Hello"}] }]], "i","i"
+]
+
+data[0][1][3].string[1] = [
+  { value: "Hello Baru" } 
+]
+
+console.log(data[0][1][3].string[1]);
+
+
+// Menambah index dengan objek menggunakkan cara destructuring dengan spread biasa : 
 
 const data = [
   ["i",["i","i","i",{ number: 123, string: ["i", { value: "Hello"}] }]], "i","i"
@@ -16,7 +29,7 @@ string = [...string, { value: "Halo Baru !"}]
 console.log(string);
 
 
-// Nested Destructuring + spread :
+// Menambah index dengan objek menggunakkan Nested Destructuring + spread :
 
 const data2 = [
   ["i",["i","i","i",{ number: 123, string2: ["i", { value: "Hello"}] }]], "i","i"
@@ -27,7 +40,6 @@ let [[_b, [_c, _d, _e, { string2 }] ],_a] = data2
 string2 = [...string2, { value: "Hello Baru" } ]
 
 console.log(string2);
-
 
 /*---------------------------------------------------------------------------------
 CASE 2 :
